@@ -6,7 +6,7 @@
   export let superform: SuperForm<SampleScheme>;
   export let form: SuperFormData<SampleScheme>;
 
-  const { path, value, errors, constraints } = formFieldProxy(superform, 'formFieldProxy.string');
+  const { path, value, errors, constraints, tainted } = formFieldProxy(superform, 'formFieldProxy.string');
 </script>
 
 <h2>formFieldProxy</h2>
@@ -21,6 +21,7 @@
     $value,
     $errors,
     $constraints,
+    $tainted,
     '$form.formFieldProxy.string': $form.formFieldProxy.string
   }}
 />
