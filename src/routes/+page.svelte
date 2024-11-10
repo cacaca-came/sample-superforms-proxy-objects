@@ -1,22 +1,6 @@
 <script lang="ts">
-  import SuperDebug, {
+  import {
     superForm,
-    // The primitives return a Writable<string>:
-    booleanProxy,
-    dateProxy,
-    intProxy,
-    numberProxy,
-    stringProxy,
-    // File proxies
-    fileProxy,
-    fileFieldProxy, // formFieldProxy
-    // File[] proxies
-    filesProxy,
-    filesFieldProxy, // arrayProxy
-    // The type of the others depends on the field:
-    formFieldProxy,
-    arrayProxy,
-    fieldProxy
   } from 'sveltekit-superforms';
   import { zod } from 'sveltekit-superforms/adapters';
   import BooleanProxy from './proxy/booleanProxy.svelte';
@@ -123,22 +107,16 @@
       <li><a href="#form-field-proxy-for-array">formFieldProxy [arrayの場合]</a></li>
       <li><a href="#field-proxy">fieldProxy</a></li>
     </ul>
-    <!-- <SuperDebug data={{ $form, $errors }} /> -->
   </aside>
 </div>
 
 <style>
   .container {
     display: grid;
-    grid-template-columns: 1fr 540px;
+    grid-template-columns: 1fr 300px;
     width: 100%;
     max-width: 1600px;
     margin: auto;
-
-    & main {
-      display: flex;
-      flex: 1;
-    }
 
     & aside {
       align-self: start;
@@ -150,7 +128,7 @@
 
   form {
     display: grid;
-    gap: 24px;
+    gap: 32px;
     margin-bottom: 16px;
     font-size: 16px;
     line-height: 1.5;
@@ -179,11 +157,15 @@
     text-decoration: none;
   }
 
-  li {
-    font-size: 24px;
-    text-align: right;
-    list-style: none;
+  ul {
     padding-left: 0;
-    margin-bottom: 12px;
+
+    & li {
+      font-size: 24px;
+      text-align: right;
+      list-style: none;
+      padding-left: 0;
+      margin-bottom: 12px;
+    }
   }
 </style>

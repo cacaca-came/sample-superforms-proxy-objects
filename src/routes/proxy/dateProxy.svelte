@@ -91,6 +91,7 @@
     display: grid;
     gap: 8px;
     grid-template-columns: 160px 1fr 1fr;
+    align-items: center;
   }
 
   label {
