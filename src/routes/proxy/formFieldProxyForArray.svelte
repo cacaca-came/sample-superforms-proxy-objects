@@ -87,6 +87,8 @@
   }
 
   fieldset {
+    display: flex;
+    gap: 8px;
     margin-bottom: 16px;
   }
 </style>

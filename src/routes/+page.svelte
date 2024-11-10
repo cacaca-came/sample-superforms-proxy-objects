@@ -1,7 +1,5 @@
 <script lang="ts">
-  import {
-    superForm,
-  } from 'sveltekit-superforms';
+  import { superForm } from 'sveltekit-superforms';
   import { zod } from 'sveltekit-superforms/adapters';
   import BooleanProxy from './proxy/booleanProxy.svelte';
   import DateProxy from './proxy/dateProxy.svelte';

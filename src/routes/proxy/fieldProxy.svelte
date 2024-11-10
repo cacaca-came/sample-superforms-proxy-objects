@@ -21,9 +21,13 @@
   .content {
     display: grid;
     gap: 8px;
-    grid-template-columns: 160px 1fr 1fr;
+    grid-template-columns: 120px 1fr 1fr;
     align-items: center;
     margin-bottom: 16px;
+  }
+
+  label {
+    text-align: right;
   }
 
   input {

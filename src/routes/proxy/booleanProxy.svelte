@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { booleanProxy } from 'sveltekit-superforms';
+  import SuperDebug, { booleanProxy } from 'sveltekit-superforms';
   import type { SuperFormData } from 'sveltekit-superforms/client';
   import type { SampleScheme } from '$lib/schemas';
 
@@ -19,12 +19,15 @@
   $form
   <input type="checkbox" bind:checked={$form.booleanProxy.trueDisplay} />
 </div>
+<SuperDebug data={{ $proxy, '$form.booleanProxy': $form.booleanProxy }} />
 
 <style>
   .content {
     display: grid;
     gap: 8px;
     grid-template-columns: 160px 1fr;
+    align-items: center;
+    margin-bottom: 16px;
   }
 
   input {
